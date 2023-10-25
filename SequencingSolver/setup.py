@@ -11,7 +11,7 @@ setuptools.setup(
     description="Package for solving various sequencing problems",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url=None,
+    url="https://github.com/esNIMA/SequencingSolver",
     project_urls={
         "Bug Tracker": "https://github.com/esNIMA/SequencingSolver/issues",
     },

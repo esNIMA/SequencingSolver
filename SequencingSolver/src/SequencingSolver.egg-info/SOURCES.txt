@@ -1,0 +1,9 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/SequencingSolver.egg-info/PKG-INFO
+src/SequencingSolver.egg-info/SOURCES.txt
+src/SequencingSolver.egg-info/dependency_links.txt
+src/SequencingSolver.egg-info/top_level.txt

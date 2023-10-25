@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: SequencingSolver
+Version: 1.0.0
+Summary: Package for solving various sequencing problems
+Home-page: package URL
+Author: Nima Mahmoodian
+Author-email: s.nima.mahmoodian@gmail.com
+Project-URL: Bug Tracker, https://github.com/esNIMA/SequencingSolver/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt

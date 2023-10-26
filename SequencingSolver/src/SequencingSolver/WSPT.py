@@ -3,6 +3,40 @@ import matplotlib.pyplot as plt
 
 
 def wsptSolver(jobsData):
+    """
+    Solve a scheduling problem using the Weighted Shortest Processing Time (WSPT) algorithm and create a Gantt chart.
+
+    Args:
+        jobsData (dict): A dictionary containing job data, where keys are job identifiers, and values are dictionaries
+                        with the following format:
+                        {
+                            "processingtime": int,  # The time required to complete the job.
+                            "weight": int            # The weight of the job.
+                        }
+
+    Returns:
+        None
+
+    This function applies the Weighted Shortest Processing Time (WSPT) algorithm to schedule jobs based on their processing
+    times and weights. It calculates the optimal job sequence and generates a Gantt chart to visualize the schedule.
+
+    The `jobsData` dictionary should be structured as follows:
+    {
+        "Job1": {"processingtime": 5, "weight": 10},
+        "Job2": {"processingtime": 4, "weight": 8},
+        "Job3": {"processingtime": 6, "weight": 12}
+    }
+
+    The function computes the WSPT criteria for each job, sorts them, and creates a Gantt chart to represent the schedule.
+
+    Example usage:
+    jobsData = {
+        "Job1": {"processingtime": 5, "weight": 10},
+        "Job2": {"processingtime": 4, "weight": 8},
+        "Job3": {"processingtime": 6, "weight": 12}
+    }
+    wsptSolver(jobsData)
+    """
     def createInitialLists(jobsData):
         processingTimeArray = []
         weightArray = []

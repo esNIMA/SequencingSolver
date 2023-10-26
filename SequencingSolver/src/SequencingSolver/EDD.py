@@ -3,6 +3,42 @@ import matplotlib.pyplot as plt
 
 
 def EDDsolver(jobsData):
+    """
+    Solve the Early Due Date (EDD) scheduling problem and create a Gantt chart for the optimal sequence of jobs.
+
+    Args:
+        jobsData (dict): A dictionary containing job data, where keys are job identifiers, and values are dictionaries
+                        with the following format:
+                        {
+                            "processingtime": int,  # The time required to complete the job.
+                            "duedate": int           # The due date for the job.
+                        }
+
+    Returns:
+        None
+
+    This function takes a dictionary of job data, where each job is represented by a unique identifier and has associated
+    processing time and due date. It computes the optimal job sequence based on the earliest due date (EDD) rule and
+    generates a Gantt chart to visualize the schedule.
+
+    The `jobsData` dictionary should be structured as follows:
+    {
+        "Job1": {"processingtime": 5, "duedate": 10},
+        "Job2": {"processingtime": 4, "duedate": 8},
+        ...
+    }
+
+    The Gantt chart is displayed using Matplotlib and provides a graphical representation of the job schedule in the
+    optimal sequence.
+
+    Example usage:
+    jobsData = {
+        "Job1": {"processingtime": 5, "duedate": 10},
+        "Job2": {"processingtime": 4, "duedate": 8},
+        "Job3": {"processingtime": 6, "duedate": 12}
+    }
+    EDDsolver(jobsData)
+    """
     def createInitialLists(jobsData):
         processingTimeArray = []
         duedateArray = []

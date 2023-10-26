@@ -3,6 +3,43 @@ import matplotlib.pyplot as plt
 
 
 def lclSolver(jobsData):
+    """
+    Solve a scheduling problem using the Lowest Cost Last (LCL) algorithm and create a Gantt chart for the optimal sequence.
+
+    Args:
+        jobsData (dict): A dictionary containing job data, where keys are job identifiers, and values are dictionaries
+                        with the following format:
+                        {
+                            "processingtime": int,  # The time required to complete the job.
+                            "successors": set,      # A set of job identifiers that depend on this job.
+                            "hFunction": function  # A function for computing the h value.
+                        }
+
+    Returns:
+        None
+
+    This function applies the Lowest Cost Last (LCL) algorithm to schedule jobs based on their dependencies and
+    h-values. It generates an optimal job sequence and creates a Gantt chart to visualize the schedule.
+
+    The `jobsData` dictionary should be structured as follows:
+    {
+        "Job1": {"processingtime": 5, "successors": {"Job2"}, "hFunction": some_function},
+        "Job2": {"processingtime": 4, "successors": set(), "hFunction": some_function},
+        "Job3": {"processingtime": 6, "successors": {"Job1", "Job2"}, "hFunction": some_function}
+    }
+
+    The `hFunction` for each job computes a value to determine the job's priority.
+
+    The function will print the optimal job sequence and display a Gantt chart to visualize the schedule.
+
+    Example usage:
+    jobsData = {
+        "Job1": {"processingtime": 5, "successors": {"Job2"}, "hFunction": some_function},
+        "Job2": {"processingtime": 4, "successors": set(), "hFunction": some_function},
+        "Job3": {"processingtime": 6, "successors": {"Job1", "Job2"}, "hFunction": some_function}
+    }
+    lclSolver(jobsData)
+    """
     def createInitialSets(jobsData):
         jobsUniversalSet = set(jobsData.keys())
         jobsComplementarySet = jobsUniversalSet.copy()

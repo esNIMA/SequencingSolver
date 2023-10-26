@@ -3,6 +3,41 @@ import matplotlib.pyplot as plt
 
 
 def minimizeSumCjstDeadline(jobsData):
+    """
+    Solve a scheduling problem to minimize the sum of completion times (Cj) while meeting job deadlines.
+
+    Args:
+        jobsData (dict): A dictionary containing job data, where keys are job identifiers, and values are dictionaries
+                        with the following format:
+                        {
+                            "processingtime": int,  # The time required to complete the job.
+                            "deadline": int           # The job's deadline.
+                        }
+
+    Returns:
+        None
+
+    This function applies an algorithm to schedule jobs with the goal of minimizing the sum of completion times (Cj)
+    while ensuring that job deadlines are met. It computes the optimal job sequence and generates a Gantt chart to
+    visualize the schedule.
+
+    The `jobsData` dictionary should be structured as follows:
+    {
+        "Job1": {"processingtime": 5, "deadline": 10},
+        "Job2": {"processingtime": 4, "deadline": 8},
+        "Job3": {"processingtime": 6, "deadline": 12}
+    }
+
+    The function will print the optimal job sequence and create a Gantt chart to represent the job schedule.
+
+    Example usage:
+    jobsData = {
+        "Job1": {"processingtime": 5, "deadline": 10},
+        "Job2": {"processingtime": 4, "deadline": 8},
+        "Job3": {"processingtime": 6, "deadline": 12}
+    }
+    minimizeSumCjstDeadline(jobsData)
+    """
     def createInitialLists(jobsData):
         processingTimeArray = []
         deadlineArray = []

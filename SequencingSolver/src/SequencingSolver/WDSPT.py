@@ -3,6 +3,44 @@ import matplotlib.pyplot as plt
 
 
 def wdsptSolver(jobsData, r):
+    """
+    Solve a scheduling problem using the Weighted Discounted Shortest Processing Time (WDSPT) algorithm and create a Gantt chart.
+
+    Args:
+        jobsData (dict): A dictionary containing job data, where keys are job identifiers, and values are dictionaries
+                        with the following format:
+                        {
+                            "processingtime": int,  # The time required to complete the job.
+                            "weight": int            # The weight of the job.
+                        }
+        r (float): A discount factor for adjusting the criteria calculation.
+
+    Returns:
+        None
+
+    This function applies the Weighted Discounted Shortest Processing Time (WDSPT) algorithm to schedule jobs based on their
+    processing times and weights, with the consideration of a discount factor 'r'. It calculates the optimal job sequence and
+    generates a Gantt chart to visualize the schedule.
+
+    The `jobsData` dictionary should be structured as follows:
+    {
+        "Job1": {"processingtime": 5, "weight": 10},
+        "Job2": {"processingtime": 4, "weight": 8},
+        "Job3": {"processingtime": 6, "weight": 12}
+    }
+
+    The `r` parameter adjusts the importance of the discount factor in the criteria calculation.
+
+    The function computes the WDSPT criteria for each job, sorts them, and creates a Gantt chart to represent the schedule.
+
+    Example usage:
+    jobsData = {
+        "Job1": {"processingtime": 5, "weight": 10},
+        "Job2": {"processingtime": 4, "weight": 8},
+        "Job3": {"processingtime": 6, "weight": 12}
+    }
+    wdsptSolver(jobsData, r=0.1)
+    """
     def createInitialLists(jobsData):
         processingTimeArray = []
         weightArray = []

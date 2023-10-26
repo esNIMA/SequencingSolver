@@ -5,7 +5,6 @@ setup.cfg
 setup.py
 src/SequencingSolver/EDD.py
 src/SequencingSolver/LCL.py
-src/SequencingSolver/SPT.py
 src/SequencingSolver/WDSPT.py
 src/SequencingSolver/WSPT.py
 src/SequencingSolver/__init__.py

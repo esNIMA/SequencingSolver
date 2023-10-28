@@ -24,7 +24,7 @@ for using any solver, all you need to do is to pass the correct form of data str
 Let's take a quick look at each. 
 
 # WSPT Solver
-    Solve a scheduling problem using the Weighted Shortest Processing Time (WSPT) algorithm and create a Gantt chart.
+Solves a scheduling problem using the Weighted Shortest Processing Time (WSPT) algorithm and create a Gantt chart.
 
   **Args:**
         jobsData (dict): A dictionary containing job data, where keys are job identifiers, and values are dictionaries
@@ -34,7 +34,8 @@ Let's take a quick look at each.
                             "weight": int            # The weight of the job.
                         }
 it returns the optimal sequence and the corresponding Gantt chart. 
-    **Example usage:**
+    
+**Example usage:**
     ```bash
     jobsData = {
         "Job1": {"processingtime": 5, "weight": 10},

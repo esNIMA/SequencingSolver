@@ -24,7 +24,7 @@ for using any solver, all you need to do is to pass the correct form of data str
 Let's take a quick look at each. 
 
 # WSPT Solver
-Solves a scheduling problem using the Weighted Shortest Processing Time (WSPT) algorithm and create a Gantt chart.
+Solves a scheduling problem using the Weighted Shortest Processing Time (WSPT) algorithm and creates a Gantt chart.
 
 **Args:**
 jobsData (dict): A dictionary containing job data, where keys are job identifiers, and values are dictionaries with the following format:
@@ -125,8 +125,8 @@ Solve a scheduling problem using the Lowest Cost Last (LCL) algorithm and create
                             "hFunction": function  # A function for computing the h value.
                         }
  
-  **important note**
-  You must always pass jobsComplementarySet, jobsData, and j to the h calculator function. No matter wether it uses them or not. 
+  **Important note**
+  You must always pass jobsComplementarySet, jobsData, and j to the h calculator function. No matter whether it uses them or not. 
 
    **Example usage:**
 ```bash
@@ -151,7 +151,7 @@ Solve a scheduling problem to minimize the sum of completion times (Cj) while me
                             "deadline": int           # The job's deadline.
                         }
 
-This function applies an algorithm to schedule jobs with the goal of minimizing the sum of completion times (Cj)
+This function applies an algorithm to schedule jobs to minimize the sum of completion times (Cj)
 while ensuring that job deadlines are met. It computes the optimal job sequence and generates a Gantt chart to visualize the schedule.
 The function will print the optimal job sequence and create a Gantt chart to represent the job schedule.
 

@@ -49,13 +49,15 @@ it returns the optimal sequence and the corresponding Gantt chart.
 Solve a scheduling problem using the Weighted Discounted Shortest Processing Time (WDSPT) algorithm and create a Gantt chart.
 
   **Args:**
-        jobsData (dict): A dictionary containing job data, where keys are job identifiers, and values are dictionaries
+ jobsData (dict): A dictionary containing job data, where keys are job identifiers, and values are dictionaries
+                       
                         with the following format:
                         {
                             "processingtime": int,  # The time required to complete the job.
                             "weight": int            # The weight of the job.
                         }
         r (float): A discount factor for adjusting the criteria calculation.
+  
   it returns the optimal sequence and the corresponding Gantt chart. 
 
    **Example usage:**
@@ -72,8 +74,9 @@ Solve a scheduling problem using the Weighted Discounted Shortest Processing Tim
     Solve the Early Due Date (EDD) scheduling problem and create a Gantt chart for the optimal sequence of jobs.
 
   **Args:**
-        jobsData (dict): A dictionary containing job data, where keys are job identifiers, and values are dictionaries
-                        with the following format:
+
+jobsData (dict): A dictionary containing job data, where keys are job identifiers, and values are dictionaries with the following format:
+                        
                         {
                             "processingtime": int,  # The time required to complete the job.
                             "duedate": int           # The due date for the job.
@@ -92,12 +95,14 @@ Solve a scheduling problem using the Weighted Discounted Shortest Processing Tim
 Solve a scheduling problem using the Hodgson algorithm and generate alternative job sequences.
 
 **Args:**
+       
         jobsData (dict): A dictionary containing job data, where keys are job identifiers, and values are dictionaries
                         with the following format:
                         {
                             "processingtime": int,  # The time required to complete the job.
                             "duedate": int           # The due date for the job.
                         }
+    
     **Example usage:**
 ```bash
     jobsData = {
@@ -111,6 +116,7 @@ Solve a scheduling problem using the Hodgson algorithm and generate alternative 
 Solve a scheduling problem using the Lowest Cost Last (LCL) algorithm and create a Gantt chart for the optimal sequence.
 
   **Args:**
+      
         jobsData (dict): A dictionary containing job data, where keys are job identifiers, and values are dictionaries
                         with the following format:
                         {
@@ -118,6 +124,7 @@ Solve a scheduling problem using the Lowest Cost Last (LCL) algorithm and create
                             "successors": set,      # A set of job identifiers that depend on this job.
                             "hFunction": function  # A function for computing the h value.
                         }
+ 
   **important note**
   You must always pass jobsComplementarySet, jobsData, and j to the h calculator function. No matter wether it uses them or not. 
 
@@ -136,12 +143,14 @@ Solve a scheduling problem using the Lowest Cost Last (LCL) algorithm and create
 Solve a scheduling problem to minimize the sum of completion times (Cj) while meeting job deadlines.
 
 **Args:**
+      
         jobsData (dict): A dictionary containing job data, where keys are job identifiers, and values are dictionaries
                         with the following format:
                         {
                             "processingtime": int,  # The time required to complete the job.
                             "deadline": int           # The job's deadline.
                         }
+
 This function applies an algorithm to schedule jobs with the goal of minimizing the sum of completion times (Cj)
 while ensuring that job deadlines are met. It computes the optimal job sequence and generates a Gantt chart to visualize the schedule.
 The function will print the optimal job sequence and create a Gantt chart to represent the job schedule.

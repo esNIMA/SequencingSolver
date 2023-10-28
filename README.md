@@ -14,7 +14,7 @@ python3 -m pip install SequencingSolver
 
 For Windows, use the following command in the command prompt:
 ```bash
-python -m pip install SequencingSolver
+py -m pip install SequencingSolver
 ```
 ## How to use the library?
 

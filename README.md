@@ -7,5 +7,3 @@ In order to run the library, you need Numpy and Matplotlib to be installed. Then
 Linux/Mac: 
 ~~~python3 pip install SequencingSolver~~~
 
-Windows: 
-~~~py pip install SequencingSolver~~~

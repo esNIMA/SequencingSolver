@@ -36,14 +36,14 @@ Solves a scheduling problem using the Weighted Shortest Processing Time (WSPT) a
 it returns the optimal sequence and the corresponding Gantt chart. 
     
 **Example usage:**
-    ```bash
+```bash
     jobsData = {
         "Job1": {"processingtime": 5, "weight": 10},
         "Job2": {"processingtime": 4, "weight": 8},
         "Job3": {"processingtime": 6, "weight": 12}
     }
     wsptSolver(jobsData)
-    ```
+ ```
 # WDSPT Solver
 Solve a scheduling problem using the Weighted Discounted Shortest Processing Time (WDSPT) algorithm and create a Gantt chart.
 

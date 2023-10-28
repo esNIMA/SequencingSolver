@@ -26,9 +26,8 @@ Let's take a quick look at each.
 # WSPT Solver
 Solves a scheduling problem using the Weighted Shortest Processing Time (WSPT) algorithm and create a Gantt chart.
 
-  **Args:**
-        jobsData (dict): A dictionary containing job data, where keys are job identifiers, and values are dictionaries
-                        with the following format:
+**Args:**
+jobsData (dict): A dictionary containing job data, where keys are job identifiers, and values are dictionaries with the following format:
                         {
                             "processingtime": int,  # The time required to complete the job.
                             "weight": int            # The weight of the job.

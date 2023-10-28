@@ -10,7 +10,7 @@ In order to run the library, you need Numpy and Matplotlib to be installed. Then
 ```bash
 python3 -m pip install SequencingSolver
 
-# Windows
+**Windows:**
 
 For Windows, use the following command in the command prompt:
 ```bash

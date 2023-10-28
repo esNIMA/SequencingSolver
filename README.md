@@ -28,10 +28,12 @@ Solves a scheduling problem using the Weighted Shortest Processing Time (WSPT) a
 
 **Args:**
 jobsData (dict): A dictionary containing job data, where keys are job identifiers, and values are dictionaries with the following format:
+                        
                         {
                             "processingtime": int,  # The time required to complete the job.
                             "weight": int            # The weight of the job.
                         }
+
 it returns the optimal sequence and the corresponding Gantt chart. 
     
 **Example usage:**

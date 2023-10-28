@@ -16,14 +16,14 @@ For Windows, use the following command in the command prompt:
 ```bash
 python -m pip install SequencingSolver
 ```
-##How to use the library?
+## How to use the library?
 
 in version 1.0.2 of the library, there are currently six optimization algorithms: WSPT, WDSPT, EDD, Hodgson, LCL, and minimizeSumCjStDeadline. 
 for using any solver, all you need to do is to pass the correct form of data structure (which I call jobsData) to the corresponding solver. 
 
 Let's take a quick look at each. 
 
-#WSPT Solver
+# WSPT Solver
     Solve a scheduling problem using the Weighted Shortest Processing Time (WSPT) algorithm and create a Gantt chart.
 
   **Args:**
@@ -43,7 +43,7 @@ it returns the optimal sequence and the corresponding Gantt chart.
     }
     wsptSolver(jobsData)
     ```
-#WDSPT Solver
+# WDSPT Solver
 Solve a scheduling problem using the Weighted Discounted Shortest Processing Time (WDSPT) algorithm and create a Gantt chart.
 
   **Args:**
@@ -66,7 +66,7 @@ Solve a scheduling problem using the Weighted Discounted Shortest Processing Tim
     wdsptSolver(jobsData, r=0.1)
 ```
 
-#EDD Solver
+# EDD Solver
     Solve the Early Due Date (EDD) scheduling problem and create a Gantt chart for the optimal sequence of jobs.
 
   **Args:**
@@ -86,7 +86,7 @@ Solve a scheduling problem using the Weighted Discounted Shortest Processing Tim
     }
 ```
 
-#Hodgson Solver
+# Hodgson Solver
 Solve a scheduling problem using the Hodgson algorithm and generate alternative job sequences.
 
 **Args:**
@@ -105,7 +105,7 @@ Solve a scheduling problem using the Hodgson algorithm and generate alternative 
     }
     hodgsonSolver(jobsData)
  ```
-#LCL Solver
+# LCL Solver
 Solve a scheduling problem using the Lowest Cost Last (LCL) algorithm and create a Gantt chart for the optimal sequence.
 
   **Args:**
@@ -129,7 +129,7 @@ Solve a scheduling problem using the Lowest Cost Last (LCL) algorithm and create
     lclSolver(jobsData)
 ```
 
-#minimizeSumCjStDeadline
+# minimizeSumCjStDeadline
 
 Solve a scheduling problem to minimize the sum of completion times (Cj) while meeting job deadlines.
 

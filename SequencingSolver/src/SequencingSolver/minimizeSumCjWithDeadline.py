@@ -32,9 +32,13 @@ def minimizeSumCjstDeadline(jobsData):
 
     Example usage:
     jobsData = {
-        "Job1": {"processingtime": 5, "deadline": 10},
-        "Job2": {"processingtime": 4, "deadline": 8},
-        "Job3": {"processingtime": 6, "deadline": 12}
+        jobsData = {
+        1: {"processingtime": 4, "deadline": 10},
+        2: {"processingtime": 6, "deadline": 12},
+        3: {"processingtime": 2, "deadline": 14},
+        4: {"processingtime": 4, "deadline": 18},
+        5: {"processingtime": 2, "deadline": 18},
+}
     }
     minimizeSumCjstDeadline(jobsData)
     """
@@ -52,22 +56,18 @@ def minimizeSumCjstDeadline(jobsData):
     k = len(jobsData)
     tau = sum(processingTimeArray[:k + 1])
     gantt_data = []
-
-    while jobsData:
-        candidateJobs = [(job, processingtime) for job, processingtime in jobsData.items(
-        ) if jobsData[job]["deadline"] >= tau]
-        if not candidateJobs:
-            break
-
-        candidateJobs.sort(key=lambda x: x[1], reverse=True)
-        selected_job, processing_time = candidateJobs[0]
-
-        reverseOptimalSequence.append(selected_job)
-        gantt_data.append([selected_job, tau, tau + processing_time])
-
-        tau -= processing_time
-        jobsData.pop(selected_job)
-
+    dataCopy=jobsData.copy()
+    while jobsData!={}:
+        candidateJobs=[]
+        for job in jobsData.keys():
+            if jobsData[job]["deadline"] >=tau:
+                candidateJobs.append((job,jobsData[job]["processingtime"]))
+        print("Candidate jobs",sorted(candidateJobs, key=lambda x: x[1], reverse=True))
+        reverseOptimalSequence.append(sorted(candidateJobs, key=lambda x: x[1], reverse=True)[0][0])
+        tau= tau - sorted(candidateJobs, key=lambda x: x[1], reverse=True)[0][1]
+        jobsData.pop(sorted(candidateJobs, key=lambda x: x[1], reverse=True)[0][0])
+        print("tau",tau)
+        print("reverseOptimalSequence",reverseOptimalSequence)
     OptimalSequence = reverseOptimalSequence[::-1]
     print("The optimal sequence is:", OptimalSequence)
 
@@ -75,7 +75,7 @@ def minimizeSumCjstDeadline(jobsData):
     current_time = 0
 
     for job in OptimalSequence:
-        job_processing_time = jobsData[job]["processingtime"]
+        job_processing_time = dataCopy[job]["processingtime"]
         gantt_data[job] = (current_time, current_time + job_processing_time)
         current_time += job_processing_time
 

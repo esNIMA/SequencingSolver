@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="SequencingSolver",
-    version="1.0.2",
+    version="1.0.3",
     author="Nima Mahmoodian",
     author_email="s.nima.mahmoodian@gmail.com",
     description="Package for solving various sequencing problems",

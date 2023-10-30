@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: SequencingSolver
-Version: 1.0.2
+Version: 1.0.3
 Summary: Package for solving various sequencing problems
 Home-page: https://github.com/esNIMA/SequencingSolver
 Author: Nima Mahmoodian
